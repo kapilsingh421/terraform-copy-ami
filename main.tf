@@ -1,11 +1,11 @@
 module "search" {
   source = "search"
-  region = "us-east-1"
+  region = "us-east-2"
 }
 
-module "copy-to-us-east-2" {
+module "copy-to-us-east-1" {
   source   = "copy"
-  region   = "us-east-2"
+  region   = "us-east-1"
   copy_ami = "${module.search.my-source-ami}"
 }
 
